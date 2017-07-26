@@ -51,3 +51,15 @@ highlight statusline term=NONE cterm=NONE guifg=red ctermfg=yellow ctermbg=black
 " Key操作
 inoremap jj <Esc>  " insert mode時にjjと入力した場合はESC
 nnoremap Y y$      " 行全体のヤンクを現在地から行末までヤンクに変更
+
+" Mouse操作の有効化
+if has('mouse')
+    set mouse=a
+    if has('mouse_sgr')
+        set ttymouse=sgr
+    elseif v:version > 703 || v:version is 703 && has('patch632')
+        set ttymouse=sgr
+    else
+        set ttymouse=xterm2
+    endif
+endif

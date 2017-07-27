@@ -58,6 +58,11 @@ inoremap <C-e> <Esc>$
 inoremap <C-a> <Esc>^
 noremap <C-e> <Esc>$
 noremap <C-a> <Esc>^
+" カーソル移動
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
 
 " Mouse操作の有効化
 if has('mouse')

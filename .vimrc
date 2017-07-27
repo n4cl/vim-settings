@@ -53,6 +53,11 @@ highlight statusline term=NONE cterm=NONE guifg=red ctermfg=yellow ctermbg=black
 inoremap jj <Esc>
 " 行全体のヤンクを現在地から行末までヤンクに変更
 nnoremap Y y$
+" 行頭、行末への移動をマップ
+inoremap <C-e> <Esc>$
+inoremap <C-a> <Esc>^
+noremap <C-e> <Esc>$
+noremap <C-a> <Esc>^
 
 " Mouse操作の有効化
 if has('mouse')

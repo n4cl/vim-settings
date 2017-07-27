@@ -49,8 +49,10 @@ set statusline=%F%m%r%h%w\%=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[LO
 highlight statusline term=NONE cterm=NONE guifg=red ctermfg=yellow ctermbg=black
 
 " Key操作
-inoremap jj <Esc>  " insert mode時にjjと入力した場合はESC
-nnoremap Y y$      " 行全体のヤンクを現在地から行末までヤンクに変更
+" insert mode時にjjと入力した場合はESC
+inoremap jj <Esc>
+" 行全体のヤンクを現在地から行末までヤンクに変更
+nnoremap Y y$
 
 " Mouse操作の有効化
 if has('mouse')

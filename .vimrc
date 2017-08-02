@@ -81,6 +81,8 @@ execute 'set runtimepath^=' . s:dein_repo_dir
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#add('Shougo/dein.vim')
+  " カラースキーム
+  call dein#add('tomasr/molokai')
   call dein#end()
   call dein#save_state()
 endif
@@ -92,3 +94,4 @@ endif
 
 " dein.vimの後でないと有効にならない
 syntax on               " シンタックスハイライト
+colorscheme molokai     " カラースキーム設定

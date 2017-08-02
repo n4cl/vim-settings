@@ -11,7 +11,6 @@ set noerrorbells          " エラー時のビープ音をオフ
 
 
 " 表示
-syntax on               " シンタックスハイライト
 set list                " 不可視文字の可視化
 set number              " 行番号の表示
 set wrap                " 長いテキストの折り返し
@@ -91,3 +90,5 @@ if dein#check_install()
   call dein#install()
 endif
 
+" dein.vimの後でないと有効にならない
+syntax on               " シンタックスハイライト

@@ -83,6 +83,8 @@ if dein#load_state(s:dein_dir)
   call dein#add('Shougo/dein.vim')
   " カラースキーム
   call dein#add('tomasr/molokai')
+  " 末尾のスペースをハイライトさせる
+  call dein#add('bronson/vim-trailing-whitespace')
   call dein#end()
   call dein#save_state()
 endif

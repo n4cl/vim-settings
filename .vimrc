@@ -90,6 +90,9 @@ if dein#load_state(s:dein_dir)
 
   " Gitコマンド
   call dein#add('tpope/vim-fugitive')
+
+  " 差分を表示
+  call dein#add('airblade/vim-gitgutter')
   call dein#end()
   call dein#save_state()
 endif

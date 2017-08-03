@@ -44,7 +44,7 @@ set noswapfile
 
 " ステータスバーにファイル名、文字エンコード、改行コードの表示
 set laststatus=2
-set statusline=%F%m%r%h%w\%=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[LOW=%l/%L]
+set statusline=%F%m%r%h%w\%=%{fugitive#statusline()}[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[LOW=%l/%L]
 highlight statusline term=NONE cterm=NONE guifg=red ctermfg=yellow ctermbg=black
 
 " Key操作

@@ -17,6 +17,7 @@ set wrap                " 長いテキストの折り返し
 set showmatch           " 対応する括弧などをハイライト表示する
 set matchtime=1         " マッチした括弧にカーソルを一瞬だけしか飛ばさない (デフォルト:5)
 set display=lastline    " 長い行を省略させない
+set t_Co=256            " 256色対応
 
 " 編集
 set textwidth=0                  " 自動的に改行が入るのを無効化

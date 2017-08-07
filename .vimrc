@@ -63,6 +63,9 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
+" インクリメント/デクリメント
+nnoremap + <C-a>
+nnoremap - <C-x>
 
 " dein.vim settings
 if &compatible

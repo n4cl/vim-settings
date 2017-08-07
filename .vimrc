@@ -66,6 +66,8 @@ inoremap <C-l> <Right>
 " インクリメント/デクリメント
 nnoremap + <C-a>
 nnoremap - <C-x>
+" Esc2回でハイライトを消す
+nnoremap <Esc><Esc> :nohlsearch<CR>
 
 " dein.vim settings
 if &compatible

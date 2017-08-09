@@ -103,7 +103,12 @@ if dein#load_state(s:dein_dir)
   " 編集中にコードを実行できるようにする
   call dein#add('thinca/vim-quickrun')
   " 実行時に縦方向に実行結果を表示 / 結果に実行時間を表示
-  let g:quickrun_config = {'*': {'split': '', 'hook/time/enable': '1'}}
+  let g:quickrun_config = {
+  \  '_': {
+  \    'outputter/buffer/split': '8',
+  \    'hook/time/enable': '1'
+  \  }
+  \}
   " 下画面に実行結果を表示
   set splitbelow
 

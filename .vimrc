@@ -1,5 +1,9 @@
 scriptencoding utf-8
 
+" filetype関連をoffにする
+filetype off
+filetype plugin indent off
+
 " エンコード
 set fileencoding=utf-8               " 書き込む際のエンコード
 set fileencodings=utf-8,euc-jp,sjis  " 読み込む際のエンコード
@@ -94,6 +98,9 @@ if dein#load_state(s:dein_dir)
   " 末尾のスペースをハイライトさせる
   call dein#add('bronson/vim-trailing-whitespace')
 
+  " インデントを可視化させる
+  call dein#add('Yggdroot/indentLine')
+
   " Gitコマンド
   call dein#add('tpope/vim-fugitive')
 
@@ -126,3 +133,7 @@ set splitbelow
 " dein.vimの後でないと有効にならない
 syntax on               " シンタックスハイライト
 colorscheme molokai     " カラースキーム設定
+
+" filetype関連をonにする
+filetype plugin indent on
+

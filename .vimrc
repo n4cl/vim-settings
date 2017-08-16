@@ -93,6 +93,9 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#add('Shougo/dein.vim')
 
+  " ファイルをツリー表示
+  call dein#add('scrooloose/nerdtree')
+
   " カラースキーム
   call dein#add('tomasr/molokai')
 

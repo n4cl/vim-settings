@@ -17,6 +17,7 @@ set noerrorbells          " エラー時のビープ音をオフ
 " 表示
 set list                " 不可視文字の可視化
 set number              " 行番号の表示
+set cursorline          " カーソルのあるラインをハイライト
 set wrap                " 長いテキストの折り返し
 set showmatch           " 対応する括弧などをハイライト表示する
 set matchtime=1         " マッチした括弧にカーソルを一瞬だけしか飛ばさない (デフォルト:5)

@@ -114,6 +114,9 @@ if dein#load_state(s:dein_dir)
   " 編集中にコードを実行できるようにする
   call dein#add('thinca/vim-quickrun')
 
+  " pep8チェック
+  call dein#add('nvie/vim-flake8')
+
   call dein#end()
   call dein#save_state()
 endif
@@ -133,6 +136,9 @@ let g:quickrun_config = {
 \}
 " 下画面に実行結果を表示
 set splitbelow
+
+" 保存時にPythonファイルに対してFlake8実行
+autocmd BufWritePost *.py call Flake8()
 
 " dein.vimの後でないと有効にならない
 syntax on               " シンタックスハイライト

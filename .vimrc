@@ -1,5 +1,10 @@
 scriptencoding utf-8
 
+" groupの初期化
+augroup vimrc
+  autocmd!
+augroup END
+
 " filetype関連をoffにする
 filetype off
 filetype plugin indent off
@@ -137,8 +142,10 @@ let g:quickrun_config = {
 " 下画面に実行結果を表示
 set splitbelow
 
-" 保存時にPythonファイルに対してFlake8実行
-autocmd BufWritePost *.py call Flake8()
+if executable('flake8')
+  " 保存時にPythonファイルに対してFlake8実行
+  autocmd vimrc BufWritePost *.py call Flake8()
+endif
 
 " dein.vimの後でないと有効にならない
 syntax on               " シンタックスハイライト

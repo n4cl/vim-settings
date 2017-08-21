@@ -149,9 +149,15 @@ if executable('flake8')
   " 保存時にPythonファイルに対してFlake8実行
   autocmd vimrc BufWritePost *.py call Flake8()
 
-  " 左端にシンボルを表示
+  " flake8の結果を表示
+  let g:flake8_show_quickfix=1
+
+  " 行番号の左にエラーマーク等を表示
   let g:flake8_show_in_gutter=1
 endif
+
+" vim-flake8の結果出力と競合させないため非表示
+let g:pyflakes_use_quickfix=0
 
 " dein.vimの後でないと有効にならない
 syntax on               " シンタックスハイライト

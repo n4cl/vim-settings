@@ -119,6 +119,9 @@ if dein#load_state(s:dein_dir)
   " 編集中にコードを実行できるようにする
   call dein#add('thinca/vim-quickrun')
 
+  " Pythonの構文をリアルタイムでチェック
+  call dein#add('kevinw/pyflakes-vim')
+
   " pep8チェック
   call dein#add('nvie/vim-flake8')
 

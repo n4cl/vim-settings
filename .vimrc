@@ -119,11 +119,11 @@ if dein#load_state(s:dein_dir)
   " 編集中にコードを実行できるようにする
   call dein#add('thinca/vim-quickrun')
 
-  " Pythonの構文をリアルタイムでチェック
-  call dein#add('kevinw/pyflakes-vim')
-
   " pep8チェック
   call dein#add('nvie/vim-flake8')
+
+  " Pythonの構文をリアルタイムでチェック
+  call dein#add('kevinw/pyflakes-vim')
 
   call dein#end()
   call dein#save_state()
@@ -148,6 +148,9 @@ set splitbelow
 if executable('flake8')
   " 保存時にPythonファイルに対してFlake8実行
   autocmd vimrc BufWritePost *.py call Flake8()
+
+  " 左端にシンボルを表示
+  let g:flake8_show_in_gutter=1
 endif
 
 " dein.vimの後でないと有効にならない

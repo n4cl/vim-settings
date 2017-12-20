@@ -160,6 +160,9 @@ endif
 syntax on               " シンタックスハイライト
 colorscheme molokai     " カラースキーム設定
 
+" clipboardを有効化
+set clipboard& clipboard+=unnamed
+
 " filetype関連をonにする
 filetype plugin indent on
 

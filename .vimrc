@@ -18,7 +18,6 @@ set fileformats=unix,dos,mac         " 改行コードの自動認識
 set visualbell t_vb=      " 画面のフラッシュをさせない
 set noerrorbells          " エラー時のビープ音をオフ
 
-
 " 表示
 set list                " 不可視文字の可視化
 set number              " 行番号の表示
@@ -159,9 +158,6 @@ endif
 " dein.vimの後でないと有効にならない
 syntax on               " シンタックスハイライト
 colorscheme molokai     " カラースキーム設定
-
-" clipboardを有効化
-set clipboard& clipboard+=unnamed
 
 " filetype関連をonにする
 filetype plugin indent on

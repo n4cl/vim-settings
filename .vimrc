@@ -124,6 +124,9 @@ if dein#load_state(s:dein_dir)
   " Pythonの構文をリアルタイムでチェック
   call dein#add('kevinw/pyflakes-vim')
 
+  " C++11/14/17のシンタックスハイライト
+  call dein#add('octol/vim-cpp-enhanced-highlight')
+
   call dein#end()
   call dein#save_state()
 endif

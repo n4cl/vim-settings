@@ -97,6 +97,8 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#add('Shougo/dein.vim')
 
+  call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+
   " ファイルをツリー表示
   call dein#add('scrooloose/nerdtree')
 
@@ -117,6 +119,12 @@ if dein#load_state(s:dein_dir)
 
   " 編集中にコードを実行できるようにする
   call dein#add('thinca/vim-quickrun')
+
+  " quickrun hook
+  call dein#add('osyo-manga/shabadou.vim')
+
+  " 構文チェック
+  call dein#add('osyo-manga/vim-watchdogs')
 
   " pep8チェック
   call dein#add('nvie/vim-flake8')
@@ -146,6 +154,28 @@ let g:quickrun_config = {
 \}
 " 下画面に実行結果を表示
 set splitbelow
+
+" 書き込み後に構文チェック
+let g:watchdogs_check_BufWritePost_enable = 1
+
+" c++のみ
+let g:watchdogs_check_BufWritePost_enables = {
+\   "python" : 0,
+\   "cpp" : 1
+\}
+
+" 一定時間入力がない場合構文チェック
+" バッファに書き込み後、1度だけ行われる
+let g:watchdogs_check_CursorHold_enable = 1
+
+" c++のみ有効, watchdogs_check_bufWritePost_enablesとは別なので注意
+let g:watchdogs_check_CursorHold_enables = {
+\   "python" : 0,
+\   "cpp"   : 1
+\}
+
+" シンタックスチェックのため
+call watchdogs#setup(g:quickrun_config)
 
 if executable('flake8')
   " flake8の結果を表示

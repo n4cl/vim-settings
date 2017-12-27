@@ -135,6 +135,9 @@ if dein#load_state(s:dein_dir)
   " C++11/14/17のシンタックスハイライト
   call dein#add('octol/vim-cpp-enhanced-highlight')
 
+  "quickfixを参照しエラー箇所をハイライトする
+  call dein#add('jceb/vim-hier')
+
   call dein#end()
   call dein#save_state()
 endif

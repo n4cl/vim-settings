@@ -138,6 +138,9 @@ if dein#load_state(s:dein_dir)
   "quickfixを参照しエラー箇所をハイライトする
   call dein#add('jceb/vim-hier')
 
+  "jsonでダブルクォートの可視化
+  call dein#add('elzr/vim-json')
+
   call dein#end()
   call dein#save_state()
 endif
@@ -190,6 +193,9 @@ if executable('flake8')
   " vim-flake8の結果出力と競合させないため非表示
   let g:pyflakes_use_quickfix=0
 endif
+
+" jsonのダブルクォートを可視化するため
+let g:vim_json_syntax_conceal = 0
 
 " dein.vimの後でないと有効にならない
 syntax on               " シンタックスハイライト
